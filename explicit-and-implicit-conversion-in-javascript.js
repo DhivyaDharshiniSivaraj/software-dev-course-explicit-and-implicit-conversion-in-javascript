@@ -1,32 +1,13 @@
-/*
 
-Part 1: Debugging Challenge
-The JavaScript code below contains intentional bugs related to type conversion.
-Please do the following:
-  - Run the script to observe unexpected outputs.
-  - Debug and fix the errors using explicit type conversion methods like  Number() ,  String() , or    Boolean()  where necessary.
-  - Annotate the code with comments explaining why the fix works.
+let result = Number("5") - 2; // "It ensures numeric subtraction"
+console.log("The result is: " + String(result)); //"It ensures String output"
 
-Part 2: Write Your Own Examples
-Write their own code that demonstrates:
-  - One example of implicit type conversion.
-  - One example of explicit type conversion.
-
-  *We encourage you to:
-Include at least one edge case, like NaN, undefined, or null .
-Use console.log() to clearly show the before-and-after type conversions.
-
-*/
-
-
-let result = "5" - 2;
-console.log("The result is: " + result);
-
-let isValid = Boolean("false");
+let input = "false";
+let isValid = (input === "false"); //"Boolean("false") evaluates to true and input === "false" correctly evaluates to false"
 if (isValid) {
     console.log("This is valid!");
 }
 
 let age = "25";
-let totalAge = age + 5;
-console.log("Total Age: " + totalAge);
+let totalAge = Number(age) + 5; //"Changes string "25" into a numeric value, preventing the "255" error."
+console.log("Total Age: " + String(totalAge)); //"Prints the totalAge in String"
